@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rock Raj — Video Editor & Content Creator. Shorts, Reels, YouTube and Gaming edits.">
+  <title>Rock Raj | Video Editor & Content Creator</title>
+
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:#08090c;color:#f7f7f8;line-height:1.5
+    }
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    nav{
+      height:78px;display:flex;align-items:center;justify-content:space-between;
+      position:sticky;top:0;z-index:20;background:rgba(8,9,12,.82);
+      backdrop-filter:blur(16px);border-bottom:1px solid #1c1e24
+    }
+    .brand{font-weight:900;letter-spacing:.5px;font-size:22px}
+    .brand span{color:#8e93ff}
+    .navlinks{display:flex;gap:24px;color:#a9adb8;font-size:14px}
+    .navlinks a:hover{color:white}
+    .mini-btn{
+      padding:10px 15px;border:1px solid #30333d;border-radius:999px;
+      font-weight:700;font-size:14px
+    }
+
+    .hero{padding:105px 0 90px;display:grid;grid-template-columns:1.35fr .65fr;gap:55px;align-items:center}
+    .eyebrow{color:#9298ff;text-transform:uppercase;letter-spacing:2px;font-size:13px;font-weight:800}
+    h1{font-size:clamp(48px,7vw,82px);line-height:.98;letter-spacing:-4px;margin:18px 0 25px}
+    .gradient{
+      background:linear-gradient(90deg,#fff,#8f94ff 65%,#bfc2ff);
+      -webkit-background-clip:text;background-clip:text;color:transparent
+    }
+    .hero p{font-size:19px;color:#a9adb8;max-width:650px}
+    .actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+    .btn{padding:14px 20px;border-radius:13px;font-weight:800}
+    .primary{background:#fff;color:#090a0d}
+    .secondary{border:1px solid #333640;color:#fff}
+    .primary:hover{transform:translateY(-2px)}
+    .hero-card{
+      border:1px solid #292c35;border-radius:28px;padding:28px;
+      background:linear-gradient(145deg,#14161d,#0c0d11);
+      box-shadow:0 20px 60px rgba(0,0,0,.35)
+    }
+    .avatar{
+      width:100%;aspect-ratio:1;border-radius:22px;object-fit:cover;
+      background:#171920;display:flex;align-items:center;justify-content:center;
+      color:#707582;font-weight:800
+    }
+    .location{margin-top:18px;color:#a9adb8;font-size:14px}
+
+    section{padding:80px 0;border-top:1px solid #1b1d23}
+    .section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:28px}
+    h2{font-size:42px;letter-spacing:-1.8px}
+    .muted{color:#858a96}
+    .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .work{
+      border:1px solid #292c35;background:#101217;border-radius:20px;overflow:hidden;
+      transition:.2s
+    }
+    .work:hover{transform:translateY(-4px);border-color:#454957}
+    .video-box{
+      aspect-ratio:16/9;background:linear-gradient(135deg,#20232c,#0d0e12);
+      display:flex;align-items:center;justify-content:center;color:#737987;
+      font-size:13px;font-weight:800;letter-spacing:1px
+    }
+    .video-box video{width:100%;height:100%;object-fit:cover;display:block}
+    .work-info{padding:18px}
+    .work-info h3{font-size:18px;margin-bottom:5px}
+    .work-info p{font-size:14px;color:#858a96}
+
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+    .service{
+      border:1px solid #292c35;background:#101217;padding:22px;border-radius:16px
+    }
+    .service b{display:block;margin-bottom:5px}.service span{color:#858a96;font-size:14px}
+
+    .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px}
+    .about p{color:#a5a9b4;font-size:18px;line-height:1.8}
+    .facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+    .fact{border:1px solid #292c35;padding:16px;border-radius:14px;background:#101217}
+    .fact b{display:block}.fact span{color:#858a96;font-size:13px}
+
+    .cta{
+      background:#f5f5f6;color:#0b0c10;border-radius:28px;padding:50px;
+      display:flex;justify-content:space-between;gap:30px;align-items:center
+    }
+    .cta h2{font-size:46px}.cta p{color:#555b66;max-width:580px;margin-top:10px}
+    .cta .primary{background:#0b0c10;color:white}
+    footer{padding:35px 0;color:#666b75;text-align:center;font-size:13px}
+
+    @media(max-width:800px){
+      .hero,.about{grid-template-columns:1fr}
+      .hero{padding-top:70px}
+      .work-grid,.services{grid-template-columns:1fr 1fr}
+      .navlinks{display:none}
+      .cta{display:block;padding:34px}
+      .cta .actions{margin-top:22px}
+    }
+    @media(max-width:520px){
+      h1{letter-spacing:-2.5px}
+      h2{font-size:34px}
+      .work-grid,.services,.facts{grid-template-columns:1fr}
+      .hero-card{max-width:310px}
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;width:100%">
+    <a class="brand" href="#">ROCK <span>RAJ</span></a>
+    <div class="navlinks">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+    </div>
+    <a class="mini-btn" href="#contact">Let's Work</a>
+  </div>
+</nav>
+
+<main>
+  <div class="container hero">
+    <div>
+      <div class="eyebrow">Video Editor • Content Creator</div>
+      <h1>Edits that make<br><span class="gradient">content hit harder.</span></h1>
+      <p>
+        I edit Shorts, Reels, YouTube videos and gaming content with a focus on
+        hooks, pacing, captions, sound design and retention.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#work">View My Work</a>
+        <a class="btn secondary" href="#contact">Hire Me</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <!-- Later we can replace this with your actual profile photo -->
+      <div class="avatar">ROCK RAJ</div>
+      <div class="location">📍 Bharatpur, Rajasthan • India</div>
+    </div>
+  </div>
+
+  <section id="work">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Selected Work</h2>
+          <p class="muted">Replace these cards with your real edits.</p>
+        </div>
+      </div>
+
+      <div class="work-grid">
+
+        <article class="work">
+          <div class="video-box">
+            <!-- Add your video here:
+            <video controls preload="metadata">
+              <source src="videos/reel-1.mp4" type="video/mp4">
+            </video>
+            -->
+            REEL / SHORT
+          </div>
+          <div class="work-info">
+            <h3>Short-form Edit</h3>
+            <p>Captions • SFX • Fast pacing</p>
+          </div>
+        </article>
+
+        <article class="work">
+          <div class="video-box">
+            YOUTUBE EDIT
+          </div>
+          <div class="work-info">
+            <h3>YouTube Video</h3>
+            <p>Storytelling • B-roll • Music</p>
+          </div>
+        </article>
+
+        <article class="work">
+          <div class="video-box">
+            GAMING EDIT
+          </div>
+          <div class="work-info">
+            <h3>Gaming Highlights</h3>
+            <p>Funny moments • Memes • SFX</p>
+          </div>
+        </article>
+
+        <article class="work">
+          <div class="video-box">
+            BEFORE → AFTER
+          </div>
+          <div class="work-info">
+            <h3>Raw to Final</h3>
+            <p>Show the value added by the edit</p>
+          </div>
+        </article>
+
+        <article class="work">
+          <div class="video-box">
+            CAPTIONS
+          </div>
+          <div class="work-info">
+            <h3>Caption & Motion Edit</h3>
+            <p>Animated text • Emphasis • Motion</p>
+          </div>
+        </article>
+
+        <article class="work">
+          <div class="video-box">
+            THUMBNAIL
+          </div>
+          <div class="work-info">
+            <h3>Creator Packaging</h3>
+            <p>Thumbnails • Visual branding</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>What I Edit</h2>
+          <p class="muted">Content built for creators and social platforms.</p>
+        </div>
+      </div>
+
+      <div class="services">
+        <div class="service"><b>🎬 Reels & Shorts</b><span>Hooks, captions, cuts, SFX and pacing.</span></div>
+        <div class="service"><b>▶️ YouTube Videos</b><span>Clean storytelling and polished edits.</span></div>
+        <div class="service"><b>🎮 Gaming Content</b><span>Highlights, funny moments and energetic edits.</span></div>
+        <div class="service"><b>💬 Captions & Subtitles</b><span>Readable and engaging on-screen text.</span></div>
+        <div class="service"><b>✨ Motion Graphics</b><span>Simple motion, emphasis and visual effects.</span></div>
+        <div class="service"><b>🖼️ Thumbnails</b><span>Creator-focused thumbnails and visuals.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container about">
+      <div>
+        <h2>About Rock Raj</h2>
+        <div class="facts">
+          <div class="fact"><b>Creator</b><span>Content across multiple platforms</span></div>
+          <div class="fact"><b>Editor</b><span>Short-form & long-form content</span></div>
+          <div class="fact"><b>Based in</b><span>Bharatpur, Rajasthan</span></div>
+          <div class="fact"><b>Focus</b><span>Hooks • Retention • Storytelling</span></div>
+        </div>
+      </div>
+      <div>
+        <p>
+          I'm Raj Garg, also known as Rock Raj — a content creator and video editor.
+          Because I create content myself, I understand what creators need:
+          a strong hook, clean pacing, engaging captions, the right sound effects
+          and an edit that keeps people watching.
+        </p>
+        <p style="margin-top:18px">
+          Send me your footage and reference style, and let's turn it into content
+          worth watching.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="cta">
+        <div>
+          <h2>Have footage?<br>Let's work.</h2>
+          <p>DM me with your footage, requirements and reference style.</p>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://instagram.com/rockraj.28" target="_blank">Instagram @rockraj.28</a>
+          <a class="btn secondary" style="color:#0b0c10;border-color:#c7c9ce" href="https://www.reddit.com/user/rockraj28/" target="_blank">Reddit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2026 Rock Raj • Video Editor & Content Creator • Bharatpur, Rajasthan
+</footer>
+
+</body>
+</html>
