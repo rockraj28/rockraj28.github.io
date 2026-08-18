@@ -66,26 +66,165 @@ footer{padding:35px 0;color:#666b75;text-align:center;font-size:13px}
 <div class="workgrid">
 
 
-<article class="work"><div class="preview"><video controls preload="metadata"><source src="videos/client-work-01.mp4" type="video/mp4"></video></div><div class="info"><h3>Client Work</h3><p>Video Editing • Client Project</p></div></article>
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
 
-<article class="work"><div class="preview"><video controls preload="metadata"><source src="videos/client-work-02.mp4" type="video/mp4"></video></div><div class="info"><h3>Client Work</h3><p>Video Editing • Client Project</p></div></article>
+.portfolio-card{
+  display:block;
+  border:1px solid #292c35;
+  background:#101217;
+  border-radius:20px;
+  overflow:hidden;
+  transition:.25s ease;
+}
 
-<article class="work"><div class="preview"><video controls preload="metadata"><source src="videos/client-work-03.mp4" type="video/mp4"></video></div><div class="info"><h3>Client Work</h3><p>Video Editing • Client Project</p></div></article>
+.portfolio-card:hover{
+  transform:translateY(-7px);
+  border-color:#555bff;
+  box-shadow:0 18px 45px rgba(0,0,0,.35);
+}
 
+.portfolio-thumb{
+  position:relative;
+  aspect-ratio:16/9;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#171922;
+}
 
-<article class="work"><a class="cardlink" href="https://www.instagram.com/reel/Db3Ixufpt5B/" target="_blank" rel="noopener"><div class="preview"><div class="placeholder"><span class="play">▶</span>TECH SHORT</div></div></a><div class="info"><h3>Tech Short</h3><p>Short-form editing • Tech content</p><div class="linknote">Watch on Instagram ↗</div></div></article>
+.portfolio-thumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:.35s ease;
+}
 
-<article class="work"><a class="cardlink" href="https://www.instagram.com/reel/DWiIQ4qTmXd/" target="_blank" rel="noopener"><div class="preview"><div class="placeholder"><span class="play">▶</span>EDITING SAMPLE</div></div></a><div class="info"><h3>Editing Sample</h3><p>Short-form editing • Cuts • Pacing</p><div class="linknote">Watch on Instagram ↗</div></div></article>
+.portfolio-card:hover .portfolio-thumb img{
+  transform:scale(1.06);
+}
 
-<article class="work"><a class="cardlink" href="https://www.instagram.com/reel/DUSDlSmgSH7/" target="_blank" rel="noopener"><div class="preview"><div class="placeholder"><span class="play">▶</span>COMEDY</div></div></a><div class="info"><h3>Comedy & Acting</h3><p>One creator • Three characters • Full reel</p><div class="linknote">Watch on Instagram ↗</div></div></article>
+.thumb-overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,.28);
+  transition:.25s ease;
+}
 
-<article class="work"><a class="cardlink" href="https://youtu.be/DibiQmDLMrM" target="_blank" rel="noopener"><div class="preview"><div class="placeholder"><span class="play">▶</span>MUSIC VIDEO</div></div></a><div class="info"><h3>Music Video</h3><p>My song • Edited by Rock Raj</p><div class="linknote">Watch on YouTube ↗</div></div></article>
+.portfolio-card:hover .thumb-overlay{
+  background:rgba(0,0,0,.48);
+}
 
-<article class="work"><a class="cardlink" href="https://youtu.be/JulhI2XIV0I" target="_blank" rel="noopener"><div class="preview"><div class="placeholder"><span class="play">▶</span>GAMING</div></div></a><div class="info"><h3>Gaming Video</h3><p>Gaming content • Edited by Rock Raj</p><div class="linknote">Watch on YouTube ↗</div></div></article>
+.play{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:white;
+  color:#090a0d;
+  font-size:18px;
+  padding-left:3px;
+  box-shadow:0 8px 30px rgba(0,0,0,.4);
+}
 
-<article class="work"><a class="cardlink" href="https://www.youtube.com/@rockraj_gaming" target="_blank" rel="noopener"><div class="preview"><div class="placeholder"><span class="play">▶</span>GAMING CHANNEL</div></div></a><div class="info"><h3>Rock Raj – Gaming</h3><p>Gaming videos, Shorts & streams</p><div class="linknote">Open channel ↗</div></div></article>
+.category{
+  position:absolute;
+  top:14px;
+  left:14px;
+  padding:7px 10px;
+  border-radius:999px;
+  background:rgba(5,6,9,.75);
+  border:1px solid rgba(255,255,255,.16);
+  backdrop-filter:blur(10px);
+  color:white;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1px;
+}
 
-<article class="work"><a class="cardlink" href="https://www.youtube.com/@rockraj_music" target="_blank" rel="noopener"><div class="preview"><div class="placeholder"><span class="play">▶</span>MUSIC CHANNEL</div></div></a><div class="info"><h3>Rock Raj – Music</h3><p>Original music & music videos</p><div class="linknote">Open channel ↗</div></div></article>
+.tech-thumb{
+  background:
+    radial-gradient(circle at 75% 25%,#5961ff55,transparent 35%),
+    linear-gradient(135deg,#111522,#242957);
+}
+
+.edit-thumb{
+  background:
+    radial-gradient(circle at 30% 30%,#9b5cff55,transparent 35%),
+    linear-gradient(135deg,#10121b,#302044);
+}
+
+.comedy-thumb{
+  background:
+    radial-gradient(circle at 70% 30%,#ff8b4d55,transparent 35%),
+    linear-gradient(135deg,#19120f,#38241b);
+}
+
+.client-thumb{
+  background:
+    radial-gradient(circle at 30% 30%,#6d77ff55,transparent 35%),
+    linear-gradient(135deg,#10131e,#252b48);
+}
+
+.client-label{
+  padding:12px 18px;
+  border:1px solid #ffffff22;
+  border-radius:999px;
+  background:#ffffff12;
+  backdrop-filter:blur(10px);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+.music-thumb,
+.gaming-thumb{
+  background:#15171e;
+}
+
+.portfolio-info{
+  padding:18px;
+}
+
+.portfolio-info h3{
+  font-size:19px;
+  margin-bottom:5px;
+}
+
+.portfolio-info p{
+  color:#858a96;
+  font-size:13px;
+  margin-bottom:13px;
+}
+
+.view-work{
+  color:#9da2ff;
+  font-size:13px;
+  font-weight:800;
+}
+
+/* Mobile */
+@media(max-width:900px){
+  .portfolio-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:520px){
+  .portfolio-grid{
+    grid-template-columns:1fr;
+  }
+}
 
 </div></div></section>
 
