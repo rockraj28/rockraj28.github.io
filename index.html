@@ -37,7 +37,34 @@ section{padding:82px 0;border-top:1px solid #1b1d23}.head{margin-bottom:30px}h2{
 footer{padding:35px 0;color:#666b75;text-align:center;font-size:13px}
 @media(max-width:800px){.hero,.about{grid-template-columns:1fr}.hero{padding-top:65px}.workgrid,.services{grid-template-columns:1fr 1fr}.navlinks{display:none}.cta{display:block;padding:34px}.cta .actions{margin-top:22px}}
 @media(max-width:520px){h1{letter-spacing:-2.5px}h2{font-size:34px}.workgrid,.services,.facts{grid-template-columns:1fr}.hero-card{max-width:340px}.hero{min-height:auto}}
-</style>
+
+    .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .portfolio-card{display:block;border:1px solid #292c35;background:#101217;border-radius:20px;overflow:hidden;transition:.25s ease}
+    .portfolio-card:hover{transform:translateY(-7px);border-color:#555bff;box-shadow:0 18px 45px rgba(0,0,0,.35)}
+    .portfolio-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#171922}
+    .portfolio-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:.35s ease}
+    .portfolio-card:hover .portfolio-thumb img{transform:scale(1.06)}
+    .thumb-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.20);transition:.25s ease}
+    .portfolio-card:hover .thumb-overlay{background:rgba(0,0,0,.48)}
+    .play{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:white;color:#090a0d;font-size:18px;padding-left:3px;box-shadow:0 8px 30px rgba(0,0,0,.4)}
+    .category{position:absolute;top:14px;left:14px;padding:7px 10px;border-radius:999px;background:rgba(5,6,9,.75);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(10px);color:white;font-size:10px;font-weight:900;letter-spacing:1px}
+    .text-thumb{color:#fff;text-align:center;padding:20px;font-weight:950;letter-spacing:1px}
+    .text-thumb .big{font-size:27px;line-height:1.05}
+    .text-thumb .small{display:block;color:#b8bdca;font-size:11px;margin-top:8px;font-weight:700;letter-spacing:.7px}
+    .tech-thumb{background:radial-gradient(circle at 75% 25%,#5961ff55,transparent 35%),linear-gradient(135deg,#111522,#242957)}
+    .edit-thumb{background:radial-gradient(circle at 30% 30%,#9b5cff55,transparent 35%),linear-gradient(135deg,#10121b,#302044)}
+    .comedy-thumb{background:radial-gradient(circle at 70% 30%,#ff8b4d55,transparent 35%),linear-gradient(135deg,#19120f,#38241b)}
+    .client-thumb{background:radial-gradient(circle at 30% 30%,#6d77ff55,transparent 35%),linear-gradient(135deg,#10131e,#252b48)}
+    .music-thumb{background:radial-gradient(circle at 75% 30%,#ff4d8d44,transparent 35%),linear-gradient(135deg,#160f19,#35203e)}
+    .gaming-thumb{background:radial-gradient(circle at 70% 25%,#4dffb844,transparent 35%),linear-gradient(135deg,#0d1715,#203b35)}
+    .portfolio-info{padding:18px}
+    .portfolio-info h3{font-size:19px;margin-bottom:5px}
+    .portfolio-info p{color:#858a96;font-size:13px;margin-bottom:13px}
+    .view-work{color:#9da2ff;font-size:13px;font-weight:800}
+    @media(max-width:900px){.portfolio-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:520px){.portfolio-grid{grid-template-columns:1fr}}
+
+  </style>
 </head>
 <body>
 <nav><div class="container navin">
@@ -65,168 +92,83 @@ footer{padding:35px 0;color:#666b75;text-align:center;font-size:13px}
 <div class="head"><h2>Selected Work</h2><p class="muted">Real edits, creator work and client projects.</p></div>
 <div class="workgrid">
 
+      <div class="portfolio-grid">
 
-.portfolio-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
+        <a class="portfolio-card" href="https://www.instagram.com/reel/Db3Ixufpt5B/" target="_blank" rel="noopener">
+          <div class="portfolio-thumb tech-thumb">
+            <span class="category">TECH SHORT</span>
+            <div class="text-thumb"><div class="big">AI / TECH</div><span class="small">Short-form edit • Tech content</span></div>
+            <div class="thumb-overlay"><span class="play">▶</span></div>
+          </div>
+          <div class="portfolio-info"><h3>Tech Short</h3><p>Short-form editing • Tech content</p><span class="view-work">View Reel →</span></div>
+        </a>
 
-.portfolio-card{
-  display:block;
-  border:1px solid #292c35;
-  background:#101217;
-  border-radius:20px;
-  overflow:hidden;
-  transition:.25s ease;
-}
+        <a class="portfolio-card" href="https://www.instagram.com/reel/DWiIQ4qTmXd/" target="_blank" rel="noopener">
+          <div class="portfolio-thumb edit-thumb">
+            <span class="category">EDITING</span>
+            <div class="text-thumb"><div class="big">CREATIVE EDIT</div><span class="small">Cuts • Music • Effects • Pacing</span></div>
+            <div class="thumb-overlay"><span class="play">▶</span></div>
+          </div>
+          <div class="portfolio-info"><h3>Editing Sample</h3><p>Clean cuts • Music • Visual effects</p><span class="view-work">View Reel →</span></div>
+        </a>
 
-.portfolio-card:hover{
-  transform:translateY(-7px);
-  border-color:#555bff;
-  box-shadow:0 18px 45px rgba(0,0,0,.35);
-}
+        <a class="portfolio-card" href="https://www.instagram.com/reel/DUSDlSmgSH7/" target="_blank" rel="noopener">
+          <div class="portfolio-thumb comedy-thumb">
+            <span class="category">COMEDY</span>
+            <div class="text-thumb"><div class="big">COMEDY REEL</div><span class="small">3 characters • 1 creator • 1 minute</span></div>
+            <div class="thumb-overlay"><span class="play">▶</span></div>
+          </div>
+          <div class="portfolio-info"><h3>Comedy Reel</h3><p>Acting • Timing • Reactions • Pacing</p><span class="view-work">View Reel →</span></div>
+        </a>
 
-.portfolio-thumb{
-  position:relative;
-  aspect-ratio:16/9;
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#171922;
-}
+        <a class="portfolio-card" href="#contact">
+          <div class="portfolio-thumb client-thumb">
+            <span class="category">CLIENT WORK</span>
+            <div class="text-thumb"><div class="big">CLIENT PROJECT</div><span class="small">Editing work created for a client</span></div>
+            <div class="thumb-overlay"><span class="play">↗</span></div>
+          </div>
+          <div class="portfolio-info"><h3>Client Work</h3><p>Creator / brand editing project</p><span class="view-work">Ask for details →</span></div>
+        </a>
 
-.portfolio-thumb img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transition:.35s ease;
-}
+        <a class="portfolio-card" href="https://youtu.be/DibiQmDLMrM" target="_blank" rel="noopener">
+          <div class="portfolio-thumb music-thumb">
+            <img src="https://img.youtube.com/vi/DibiQmDLMrM/maxresdefault.jpg" alt="Rock Raj music video thumbnail" onerror="this.style.display='none'">
+            <span class="category">MUSIC VIDEO</span>
+            <div class="thumb-overlay"><span class="play">▶</span></div>
+          </div>
+          <div class="portfolio-info"><h3>Music Video</h3><p>Original song • Edited by Rock Raj</p><span class="view-work">Watch Video →</span></div>
+        </a>
 
-.portfolio-card:hover .portfolio-thumb img{
-  transform:scale(1.06);
-}
+        <a class="portfolio-card" href="https://youtu.be/JulhI2XIV0I" target="_blank" rel="noopener">
+          <div class="portfolio-thumb gaming-thumb">
+            <img src="https://img.youtube.com/vi/JulhI2XIV0I/maxresdefault.jpg" alt="Rock Raj gaming video thumbnail" onerror="this.style.display='none'">
+            <span class="category">GAMING</span>
+            <div class="thumb-overlay"><span class="play">▶</span></div>
+          </div>
+          <div class="portfolio-info"><h3>Gaming Video</h3><p>Gameplay • Editing • Entertainment</p><span class="view-work">Watch Video →</span></div>
+        </a>
 
-.thumb-overlay{
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:rgba(0,0,0,.28);
-  transition:.25s ease;
-}
+        <a class="portfolio-card" href="https://www.youtube.com/@rockraj_gaming" target="_blank" rel="noopener">
+          <div class="portfolio-thumb gaming-thumb">
+            <span class="category">GAMING CHANNEL</span>
+            <div class="text-thumb"><div class="big">ROCK RAJ GAMING</div><span class="small">Gaming videos & shorts</span></div>
+            <div class="thumb-overlay"><span class="play">▶</span></div>
+          </div>
+          <div class="portfolio-info"><h3>Gaming Channel</h3><p>My gaming content & edits</p><span class="view-work">Open Channel →</span></div>
+        </a>
 
-.portfolio-card:hover .thumb-overlay{
-  background:rgba(0,0,0,.48);
-}
+        <a class="portfolio-card" href="https://www.youtube.com/@rockraj_music" target="_blank" rel="noopener">
+          <div class="portfolio-thumb music-thumb">
+            <span class="category">MUSIC CHANNEL</span>
+            <div class="text-thumb"><div class="big">ROCK RAJ MUSIC</div><span class="small">Songs • Music videos • Releases</span></div>
+            <div class="thumb-overlay"><span class="play">▶</span></div>
+          </div>
+          <div class="portfolio-info"><h3>Music Channel</h3><p>My original music & videos</p><span class="view-work">Open Channel →</span></div>
+        </a>
 
-.play{
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:white;
-  color:#090a0d;
-  font-size:18px;
-  padding-left:3px;
-  box-shadow:0 8px 30px rgba(0,0,0,.4);
-}
-
-.category{
-  position:absolute;
-  top:14px;
-  left:14px;
-  padding:7px 10px;
-  border-radius:999px;
-  background:rgba(5,6,9,.75);
-  border:1px solid rgba(255,255,255,.16);
-  backdrop-filter:blur(10px);
-  color:white;
-  font-size:10px;
-  font-weight:900;
-  letter-spacing:1px;
-}
-
-.tech-thumb{
-  background:
-    radial-gradient(circle at 75% 25%,#5961ff55,transparent 35%),
-    linear-gradient(135deg,#111522,#242957);
-}
-
-.edit-thumb{
-  background:
-    radial-gradient(circle at 30% 30%,#9b5cff55,transparent 35%),
-    linear-gradient(135deg,#10121b,#302044);
-}
-
-.comedy-thumb{
-  background:
-    radial-gradient(circle at 70% 30%,#ff8b4d55,transparent 35%),
-    linear-gradient(135deg,#19120f,#38241b);
-}
-
-.client-thumb{
-  background:
-    radial-gradient(circle at 30% 30%,#6d77ff55,transparent 35%),
-    linear-gradient(135deg,#10131e,#252b48);
-}
-
-.client-label{
-  padding:12px 18px;
-  border:1px solid #ffffff22;
-  border-radius:999px;
-  background:#ffffff12;
-  backdrop-filter:blur(10px);
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:1px;
-}
-
-.music-thumb,
-.gaming-thumb{
-  background:#15171e;
-}
-
-.portfolio-info{
-  padding:18px;
-}
-
-.portfolio-info h3{
-  font-size:19px;
-  margin-bottom:5px;
-}
-
-.portfolio-info p{
-  color:#858a96;
-  font-size:13px;
-  margin-bottom:13px;
-}
-
-.view-work{
-  color:#9da2ff;
-  font-size:13px;
-  font-weight:800;
-}
-
-/* Mobile */
-@media(max-width:900px){
-  .portfolio-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-}
-
-@media(max-width:520px){
-  .portfolio-grid{
-    grid-template-columns:1fr;
-  }
-}
-
-</div></div></section>
+      </div>
+      </div>
+    </section>
 
 <section id="services"><div class="container">
 <div class="head"><h2>What I Do</h2><p class="muted">Editing and content creation for creators, brands and social platforms.</p></div>
